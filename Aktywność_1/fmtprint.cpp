@@ -12,7 +12,7 @@ struct ulamek
 
 void print(int number)
 {
-    fmt::print("Hello, world!\n");
+    fmt::print("{}", number);
 }
 
 void print(float number)
