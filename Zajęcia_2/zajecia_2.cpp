@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "fmt-master/include/fmt/core.h"
 
 using namespace std;
 
@@ -80,7 +79,9 @@ public:
         cout<<"Konstruktor prostokata\n";
     }
     void podaj(){
+        cout<<"Podaj pierwszy bok"<<endl;
         cin>>a;
+        cout<<"Podaj drugi bok"<<endl;
         cin>>b;
         if(a<=0||b<=0)
         {
