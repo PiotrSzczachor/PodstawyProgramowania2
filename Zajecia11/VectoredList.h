@@ -86,13 +86,21 @@ public:
 
     };
     VectorList& operator=(VectorList object){
-        if (this != &object)
-        {
-            delete[] head;
-            head = object.head;
-        }
-        return *this;
+        int i =0;
+        int j = 0;
+        size = object.size;
+        capacity = object.capacity;
+        auto* current = new Bucket[capacity];
+        while(!object.head[i].data[j].empty()) {
+            current[i].data[j] = object.head[i].data[j];
+            j++;
 
+            if(j == N) {
+                i++;
+            }
+        }
+        head = current;
+        return *this;
     }
 };
 
